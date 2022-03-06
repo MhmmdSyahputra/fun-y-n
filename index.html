@@ -11,6 +11,22 @@
 
     <style>
 
+    	@media (min-width: 1281px) {
+  
+  			.mobile{
+  				display: none;
+  			}
+  
+		}
+
+    	@media (min-width: 320px) and (max-width: 480px) {
+  
+  			.desktop{
+  				display: none;
+  			}
+  
+		}
+
     </style>
 
 </head>
@@ -35,8 +51,14 @@
 				</div>
 
 				<div class="col">
+					<!-- DESKTOP -->
 					<div id="Bn" style="position: absolute;">
-						<button class="btn btn-danger" onclick="move()" onmouseover="move()">Enggak</button>
+						<button class="btn btn-danger desktop" onmouseover="move()">Enggak</button>
+					</div>
+
+					<!-- MOBILE -->
+					<div id="Bnm" style="position: absolute;">
+						<button class="btn btn-danger mobile" onclick="move()">Enggak</button>
 					</div>
 				</div>
 			</div>
@@ -80,13 +102,13 @@
 			    const top = Math.floor(Math.random() * (450 - 0)) + 1;
 
 			    if(flag==1){
-			    	Bn.style.left=left
-			        Bn.style.top=top
+			    	Bnm.style.left=left
+			        Bnm.style.top=top
 			        flag=2
 			    }
 			    else if(flag==2){
-			        Bn.style.left=left
-			        Bn.style.top=top
+			        Bnm.style.left=left
+			        Bnm.style.top=top
 			        flag=1
 			    }
 			}
