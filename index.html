@@ -1,0 +1,127 @@
+<html>
+<head>
+<title>PT</title>
+	
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+
+    </style>
+
+</head>
+
+
+<body>
+
+	<div class="container mt-5">
+
+		<center>
+			<h1>FOR YOU</h1>
+			<img src="https://www.klikponsel.com/wp-content/uploads/2015/07/15-1.gif" class="img-fluid d-block mt-4 mb-4">
+
+			<h2 class="mb-3">Mangapin Aku Ya</h2>
+
+			<div class="row">
+
+				<div class="col">
+					<div id="iya">
+						<button class="btn btn-success" onclick="iya()" style="float: right;">Iya</button>
+					</div>
+				</div>
+
+				<div class="col">
+					<div id="Bn" style="position: absolute;">
+						<button class="btn btn-danger" onmouseover="move()">Enggak</button>
+					</div>
+				</div>
+			</div>
+
+			<footer>
+				<div class="row">
+					<div class="col text-center" style="color: #343A40; margin-top: 30vh;">
+						<hr>
+						<label class="text-center">Copyright&copy; putrapt 2022</label>
+					</div>
+				</div>
+			</footer>
+		</center>
+
+
+		
+	</div>
+	
+	
+
+<script type="text/javascript">
+
+	function iya(){
+		alert("Gitu la asw")
+	}
+
+
+
+	flag=1
+
+	const mobile = window.matchMedia('(min-width: 320px) and (max-width: 480px)')
+	const desktop = window.matchMedia('(min-width: 1281px)')
+	
+
+	
+		if (mobile.matches) { 
+
+		    function move(){
+				
+			    const left = Math.floor(Math.random() * (300 - 0)) + 1;
+			    const top = Math.floor(Math.random() * (450 - 0)) + 1;
+
+			    if(flag==1){
+			    	Bn.style.left=left
+			        Bn.style.top=top
+			        flag=2
+			    }
+			    else if(flag==2){
+			        Bn.style.left=left
+			        Bn.style.top=top
+			        flag=1
+			    }
+			}
+			// alert("mobile")
+	  	} 
+
+	  	if (desktop.matches) { 
+
+		    function move(){
+				
+			    const left = Math.floor(Math.random() * (1000 - 0)) + 1;
+			    const top = Math.floor(Math.random() * (500 - 0)) + 1;
+
+			    if(flag==1){
+			    	Bn.style.left=left
+			        Bn.style.top=top
+			        flag=2
+			    }
+			    else if(flag==2){
+			        Bn.style.left=left
+			        Bn.style.top=top
+			        flag=1
+			    }
+			}
+			// alert("desktop")
+	  	} 
+	
+
+	
+
+
+	
+
+	
+</script>
+
+</body>
+</html>
