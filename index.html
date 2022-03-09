@@ -54,7 +54,7 @@
 				<div class="col">
 					<!-- DESKTOP -->
 					<div id="Bn" style="position: absolute;">
-						<button class="btn btn-danger desktop" onmouseover="move(); audio.play();">Enggak</button>
+						<button class="btn btn-danger desktop" onmouseover="move(); loadContent();">Enggak</button>
 					</div>
 
 					<!-- MOBILE -->
@@ -91,8 +91,9 @@
 	const audio = new Audio();
 	audio.src = "ets-tidak-kena.mp3";
 
-	function loadContent(num){
+	function loadContent(){
 		audio.play()
+
 	}
 
 	function iya(){
